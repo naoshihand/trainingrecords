@@ -25,39 +25,50 @@
   </div>
 </nav>
   <div class="wrapper">
-    <nav class="sidebar collapse" id="mySidebar"><br>
-      <div>
-        <button-bar>
-        <i class="fa fa-th-large fa-fw" style="margin-right:16px!important"></i>Dashboard
-        </button-bar>
-    
-        <button-bar>
-        <i class="fa fa-group fa-fw" style="margin-right:16px!important"></i>View/Add Admins
-        </button-bar>
-    
-        <button-bar>
-        <i class="fa fa-bell fa-fw" style="margin-right:16px!important"></i>Requests
-        </button-bar>
-    
-        <button-bar>
-        <i class="fa fa-file-text-o fa-fw" style="margin-right:16px!important"></i>View/Add Training
-        </button-bar>
-    
-        <button-bar>
-        <i class="fa fa-address-card-o fa-fw" style="margin-right:16px!important"></i>View Employees
-        </button-bar>
-    
-        <button-bar>
-        <i class="fa fa-cog fa-fw" style="margin-right:16px!important"></i>Account Settings
-        </button-bar>
-    
-        <button-bar href="logout.html">
-        <i class="fa fa-sign-out fa-fw" style="margin-right:16px!important"></i>
-        <a href="logout.html">Log Out
-        </button-bar></a>
-      </div>
-    </nav>
 
+        <!-- Sidebar/menu -->
+        <nav class="sidebar collapse" id="mySidebar"><br>
+          <div style="padding:0.01em 16px">
+          </div>
+          <div>
+            <a href="dashboard.html">
+              <button-bar>
+                <i class="fa fa-th-large fa-fw" style="margin-right:16px!important"></i>Dashboard
+              </button-bar>
+            </a>
+            <a href="view_add_admins.html">
+              <button-bar>
+                <i class="fa fa-group fa-fw" style="margin-right:16px!important"></i>View/Add Admins
+              </button-bar>
+            </a>
+            <a href="requests.html">
+              <button-bar>
+                <i class="fa fa-bell fa-fw" style="margin-right:16px!important"></i>Requests
+              </button-bar>
+            </a>
+            <a href="view_add_trainings.html">
+              <button-bar>
+                <i class="fa fa-file-text-o fa-fw" style="margin-right:16px!important"></i>View/Add Training
+              </button-bar>
+            </a>
+            <a href="view_employees.html">
+              <button-bar>
+                <i class="fa fa-address-card-o fa-fw" style="margin-right:16px!important"></i>View Employees
+              </button-bar>
+            </a>
+            <a href="account_settings.html">
+              <button-bar>
+                <i class="fa fa-cog fa-fw" style="margin-right:16px!important"></i>Account Settings
+              </button-bar>
+            </a>
+            <a href="logout.html">
+              <button-bar href="logout.html">
+                <i class="fa fa-sign-out fa-fw" style="margin-right:16px!important"></i>Logout
+              </button-bar>
+            </a>
+          </div>
+        </nav>
+    
     <!-- Overlay effect when opening sidebar on small screens -->
     <div class="overlay-effect hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
       id="myOverlay"></div>
@@ -122,17 +133,6 @@
   </form>
     </div>
   </div>
-  <script>
-    // Script to open and close sidebar
-    function w3_open() {
-      document.getElementById("mySidebar").style.display = "block";
-      document.getElementById("myOverlay").style.display = "block";
-    }
-
-    function w3_close() {
-      document.getElementById("mySidebar").style.display = "none";
-      document.getElementById("myOverlay").style.display = "none";
-    }
-  </script>
+  <script src="assets/js/sidebar.js"></script>
 </body>
 </html>
