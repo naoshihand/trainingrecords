@@ -41,7 +41,9 @@
 .navbar {
   background-color: white;
   color: black;
+  width: 100%;
 }
+
 @media (min-width:768px) {
   .header-dark {
     padding-bottom: 120px;

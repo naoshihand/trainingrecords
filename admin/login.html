@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body style="background-image: url(&quot;assets/img/bg.jpg&quot;);background-size: cover;/*background-repeat: no-repeat;*/background-position: center;height: 100vh;">
+<body
+    style="background-image: url(&quot;assets/img/bg.jpg&quot;);background-size: cover;/*background-repeat: no-repeat;*/background-position: center;height: 100vh;">
     <section class="login-dark">
         <nav class="navbar navbar-expand-lg navigation-clean-search">
             <div class="container">
@@ -27,9 +28,12 @@
             <div class="illustration">
                 <h1 style="color: #bf0003;">Admin Login</h1>
             </div>
-            <div class="mb-3"><input class="form-control" type="email" name="employee_id" placeholder="Employee ID"></div>
+            <div class="mb-3"><input class="form-control" type="email" name="employee_id" placeholder="Employee ID">
+            </div>
             <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
-            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background: rgb(191,0,3);">Continue</button></div>
+            <div class="mb-3"><button class="btn btn-primary d-block w-100"
+                    style="background: rgb(191,0,3); color:white; text-decoration: none;"><a
+                        href="/admin/dashboard.html">Continue</a></button></div>
 
             <a class="forgot" href="#">Forgot your password?</a>
         </form>
