@@ -38,15 +38,6 @@
 					<i class="fa fa-history fa-fw" style="margin-right:16px!important"></i>Training History
 				</button-bar>
 				<button-bar>
-					<i class="fa fa-plus fa-fw" style="margin-right:16px!important"></i>Add New Training
-				</button-bar>
-				<button-bar>
-					<i class="fa fa-address-card-o fa-fw" style="margin-right:16px!important"></i>Employee Records
-				</button-bar>
-				<button-bar>
-					<i class="fa fa-bell fa-fw" style="margin-right:16px!important"></i>Request New Records
-				</button-bar>
-				<button-bar>
 					<i class="fa fa-user-plus fa-fw" style="margin-right:16px!important"></i>My Profile
 				</button-bar>
 				<button-bar>
@@ -106,16 +97,16 @@
 					</label>
 
 					<!-- Input Type Radio Button -->
-					<label for="choice-1">
-						<input type="radio" id="choice-1" name="choice">Senior Personnel/Managerial Level
+					<label for="1_choice-1">
+						<input type="radio" id="choice-1" name="4_choice">Senior Personnel/Managerial Level
 						</input>
 					</label>
-					<label for="choice-2">
-						<input type="radio" id="choice-2" name="choice">Supervisory/Engineer/Senior
+					<label for="1_choice-2">
+						<input type="radio" id="choice-2" name="4_choice">Supervisory/Engineer/Senior
 						Staff/Specialist</input>
 					</label>
-					<label for="choice-3">
-						<input type="radio" id="choice-3" name="choice">Rank and File/Technicians/Group
+					<label for="1_choice-3">
+						<input type="radio" id="choice-3" name="4_choice">Rank and File/Technicians/Group
 						Leader/Assistants</input>
 					</label>
 				</div>
@@ -331,24 +322,24 @@
 					</label>
 
 					<!-- Input Type Radio Button -->
-					<label for="choice-1">
-						<input type="radio" id="choice-1" name="choice">Technical
+					<label for="12_choice-1">
+						<input type="radio" id="choice-1" name="12_choice">Technical
 						</input>
 					</label>
-					<label for="choice-2">
-						<input type="radio" id="choice-2" name="choice">Behavioral/Leadership
+					<label for="12_choice-2">
+						<input type="radio" id="choice-2" name="12_choice">Behavioral/Leadership
 						</input>
 					</label>
-					<label for="choice-3">
-						<input type="radio" id="choice-3" name="choice">EHS/Safety
+					<label for="12_choice-3">
+						<input type="radio" id="choice-3" name="12_choice">EHS/Safety
 						</input>
 					</label>
-					<label for="choice-4">
-						<input type="radio" id="choice-4" name="choice">Quality Standards
+					<label for="12_choice-4">
+						<input type="radio" id="choice-4" name="12_choice">Quality Standards
 						</input>
 					</label>
-					<label for="choice-5">
-						<input type="radio" id="choice-5" name="choice">New Hire Orientation Program
+					<label for="12_choice-5">
+						<input type="radio" id="choice-5" name="12_choice">New Hire Orientation Program
 						</input>
 					</label>
 				</div>
@@ -359,12 +350,12 @@
 					</label>
 
 					<!-- Input Type Radio Button -->
-					<label for="choice-1">
-						<input type="radio" id="choice-1" name="choice">Male
+					<label for="13_choice-1">
+						<input type="radio" id="choice-1" name="13_choice">Male
 						</input>
 					</label>
-					<label for="choice-2">
-						<input type="radio" id="choice-2" name="choice">Female
+					<label for="13_choice-2">
+						<input type="radio" id="choice-2" name="13_choice">Female
 						</input>
 					</label>
 				</div>
@@ -385,72 +376,72 @@
 
 						<tr ng-repeat="item in items">
 							<th id="title"><label>Extent of understanding of the information presented</label></th>
-							<td><label><input type="radio" name="option-{{$index}}" value="poor"
+							<td><label><input type="radio" name="14_1_option-{{$index}}" value="poor"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="fair"
+							<td><label><input type="radio" name="14_1_option-{{$index}}" value="fair"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="average"
+							<td><label><input type="radio" name="14_1_option-{{$index}}" value="average"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="very-good"
+							<td><label><input type="radio" name="14_1_option-{{$index}}" value="very-good"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="excellent"
+							<td><label><input type="radio" name="14_1_option-{{$index}}" value="excellent"
 										ng-model="model[item]" /> </label></td>
 						</tr>
 
 						<tr ng-repeat="item in items" style="background-color: rgb(224, 224, 224);">
 							<th id="title"><label>Amount of learning gained from the program</label></th>
-							<td><label><input type="radio" name="option-{{$index}}" value="poor"
+							<td><label><input type="radio" name="14_2_option-{{$index}}" value="poor"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="fair"
+							<td><label><input type="radio" name="14_2_option-{{$index}}" value="fair"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="average"
+							<td><label><input type="radio" name="14_2_option-{{$index}}" value="average"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="very-good"
+							<td><label><input type="radio" name="14_2_option-{{$index}}" value="very-good"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="excellent"
+							<td><label><input type="radio" name="14_2_option-{{$index}}" value="excellent"
 										ng-model="model[item]" /> </label></td>
 						</tr>
 
 						<tr ng-repeat="item in items">
 							<th id="title"><label>Extent of attainment of the seminar's objectives</label></th>
-							<td><label><input type="radio" name="option-{{$index}}" value="poor"
+							<td><label><input type="radio" name="14_3_option-{{$index}}" value="poor"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="fair"
+							<td><label><input type="radio" name="14_3_option-{{$index}}" value="fair"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="average"
+							<td><label><input type="radio" name="14_3_option-{{$index}}" value="average"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="very-good"
+							<td><label><input type="radio" name="14_3_option-{{$index}}" value="very-good"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="excellent"
+							<td><label><input type="radio" name="14_3_option-{{$index}}" value="excellent"
 										ng-model="model[item]" /> </label></td>
 						</tr>
 
 						<tr ng-repeat="item in items" style="background-color: rgb(224, 224, 224);">
 							<th id="title"><label>Level of the Seminar's practicality and applicability</label></th>
-							<td><label><input type="radio" name="option-{{$index}}" value="poor"
+							<td><label><input type="radio" name="14_4_option-{{$index}}" value="poor"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="fair"
+							<td><label><input type="radio" name="14_4_option-{{$index}}" value="fair"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="average"
+							<td><label><input type="radio" name="14_4_option-{{$index}}" value="average"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="very-good"
+							<td><label><input type="radio" name="14_4_option-{{$index}}" value="very-good"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="excellent"
+							<td><label><input type="radio" name="14_4_option-{{$index}}" value="excellent"
 										ng-model="model[item]" /> </label></td>
 						</tr>
 
 						<tr ng-repeat="item in items">
 							<th id="title"><label>Extent by which the seminar met the participants' interests and
 									expectations.</label></th>
-							<td><label><input type="radio" name="option-{{$index}}" value="poor"
+							<td><label><input type="radio" name="14_5_option-{{$index}}" value="poor"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="fair"
+							<td><label><input type="radio" name="14_5_option-{{$index}}" value="fair"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="average"
+							<td><label><input type="radio" name="14_5_option-{{$index}}" value="average"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="very-good"
+							<td><label><input type="radio" name="14_5_option-{{$index}}" value="very-good"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="excellent"
+							<td><label><input type="radio" name="14_5_option-{{$index}}" value="excellent"
 										ng-model="model[item]" /> </label></td>
 						</tr>
 					</table>
@@ -473,44 +464,44 @@
 
 						<tr ng-repeat="item in items">
 							<th id="title"><label>Presented concepts clearly. logically and systematically</label></th>
-							<td><label><input type="radio" name="option-{{$index}}" value="poor"
+							<td><label><input type="radio" name="15_1_option-{{$index}}" value="poor"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="fair"
+							<td><label><input type="radio" name="15_1_option-{{$index}}" value="fair"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="average"
+							<td><label><input type="radio" name="15_1_option-{{$index}}" value="average"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="very-good"
+							<td><label><input type="radio" name="15_1_option-{{$index}}" value="very-good"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="excellent"
+							<td><label><input type="radio" name="15_1_option-{{$index}}" value="excellent"
 										ng-model="model[item]" /> </label></td>
 						</tr>
 
 						<tr ng-repeat="item in items" style="background-color: rgb(224, 224, 224);">
 							<th id="title"><label>Was consistently in control of the class</label></th>
-							<td><label><input type="radio" name="option-{{$index}}" value="poor"
+							<td><label><input type="radio" name="15_2_option-{{$index}}" value="poor"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="fair"
+							<td><label><input type="radio" name="15_2_option-{{$index}}" value="fair"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="average"
+							<td><label><input type="radio" name="15_2_option-{{$index}}" value="average"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="very-good"
+							<td><label><input type="radio" name="15_2_option-{{$index}}" value="very-good"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="excellent"
+							<td><label><input type="radio" name="15_2_option-{{$index}}" value="excellent"
 										ng-model="model[item]" /> </label></td>
 						</tr>
 
 						<tr ng-repeat="item in items">
 							<th id="title"><label>Presentation and Communication skills (clarity of
 									ideas/instructions</label></th>
-							<td><label><input type="radio" name="option-{{$index}}" value="poor"
+							<td><label><input type="radio" name="15_3_option-{{$index}}" value="poor"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="fair"
+							<td><label><input type="radio" name="15_3_option-{{$index}}" value="fair"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="average"
+							<td><label><input type="radio" name="15_3_option-{{$index}}" value="average"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="very-good"
+							<td><label><input type="radio" name="15_3_option-{{$index}}" value="very-good"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="excellent"
+							<td><label><input type="radio" name="15_3_option-{{$index}}" value="excellent"
 										ng-model="model[item]" /> </label></td>
 						</tr>
 					</table>
@@ -533,15 +524,15 @@
 
 						<tr ng-repeat="item in items">
 							<th id="title"><label>Feedback on the technology used in the webinar</label></th>
-							<td><label><input type="radio" name="option-{{$index}}" value="poor"
+							<td><label><input type="radio" name="16_option-{{$index}}" value="poor"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="fair"
+							<td><label><input type="radio" name="16_option-{{$index}}" value="fair"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="average"
+							<td><label><input type="radio" name="16_option-{{$index}}" value="average"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="very-good"
+							<td><label><input type="radio" name="16_option-{{$index}}" value="very-good"
 										ng-model="model[item]" /> </label></td>
-							<td><label><input type="radio" name="option-{{$index}}" value="excellent"
+							<td><label><input type="radio" name="16_option-{{$index}}" value="excellent"
 										ng-model="model[item]" /> </label></td>
 						</tr>
 					</table>
@@ -596,9 +587,10 @@
 					<!-- Input Type Text -->
 					<input type="text" id="sign" placeholder="Write your name" />
 				</div>
+					
 
 				<!-- Multi-line Text Input Control -->
-				<div>
+				<div class="button-loca">
 					<button type="submit" value="submit">
 						<p style="color:#f1f1f1">Submit</p>
 					</button>
@@ -611,6 +603,7 @@
 		</div>
 	</div>
 
+	
 	<script>
 		// Script to open and close sidebar
 		function w3_open() {
