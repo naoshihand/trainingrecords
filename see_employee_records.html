@@ -82,7 +82,33 @@
 				<div class="w3-section w3-padding-13">
 					<button class="search_btn" type="submit"><i class="fa fa-search"></i></button>
 					<input type="text" placeholder="Search..">
-					<button class="w3-button w3-red"><i class="fa fa-filter w3-margin-right"></i>Filter</button>
+					<!-- Trigger/Open the Modal -->
+					<button class="w3-button w3-red" onclick="document.getElementById('filter_popup').style.display='block'" class="w3-button">Filter</button>
+					<!-- The Modal -->
+					<div id="filter_popup" class="w3-modal">
+						<div class="w3-modal-content">
+							<div class="w3-container">
+								<span onclick="document.getElementById('filter_popup').style.display='none'"
+									class="w3-button w3-display-topright">&times;</span>
+								<p>Filter by Department</p>
+								<select name="site" id="site">
+									<option value="Bulgaria">Bulgaria</option>
+								</select>
+								<p>Filter by Status</p>
+								<select name="site" id="site">
+									<option value="Bulgaria">Bulgaria</option>
+								</select>
+								<p>Filter by Role</p>
+								<select name="site" id="site">
+									<option value="Bulgaria">Bulgaria</option>
+								</select>
+								<div class="w3-container w3-margin-top w3-margin-bottom" style="float: right;">
+									<button class="w3-button w3-red">Set</button>
+									<button class="w3-button w3-gray">Clear Filters</button>
+								</div>
+							</div>
+						</div>
+					</div>
 					<button class="w3-button w3-red"><i class="fa fa-sign-out w3-margin-right"></i>Export</button>
 				</div>
 			</div>
@@ -136,7 +162,9 @@
 
 
 	</div>
-
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="assets/js/sidebar.js"></script>
 </body>
 

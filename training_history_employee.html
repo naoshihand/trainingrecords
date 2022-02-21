@@ -66,7 +66,30 @@
 				<div class="w3-section w3-padding-13">
 					<button class="search_btn" type="submit"><i class="fa fa-search"></i></button>
 					<input type="text" placeholder="Search..">
-					<button class="w3-button w3-red"><i class="fa fa-filter w3-margin-right"></i>Filter</button>
+					<!-- Trigger/Open the Modal -->
+					<button class="w3-button w3-red" onclick="document.getElementById('filter_popup').style.display='block'" class="w3-button">Filter</button>
+					<!-- The Modal -->
+					<div id="filter_popup" class="w3-modal">
+						<div class="w3-modal-content">
+							<div class="w3-container">
+								<span onclick="document.getElementById('filter_popup').style.display='none'"
+									class="w3-button w3-display-topright">&times;</span>
+								<p>Filter by Date</p>
+								<label for="start_date">From:</label>
+								<input type="date" id="start_date" name="start_date">
+								<label for="end_date">To:</label>
+								<input type="date" id="end_date" name="end_date">
+								<p>Filter by Type</p>
+								<select name="site" id="site">
+									<option value="Bulgaria">Bulgaria</option>
+								</select>
+								<div class="w3-container w3-margin-top w3-margin-bottom" style="float: right;">
+									<button class="w3-button w3-red">Set</button>
+									<button class="w3-button w3-gray">Clear Filters</button>
+								</div>
+							</div>
+						</div>
+					</div>
 					<button class="w3-button w3-red"><i class="fa fa-sign-out w3-margin-right"></i>Export</button>
 				</div>
 			</div>

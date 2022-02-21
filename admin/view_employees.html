@@ -14,61 +14,61 @@
 	<!-- Header -->
 	<nav class="navbar navbar-expand-lg navigation-clean-search">
 		<div class="container">
-		  <img class="logo" src="assets/img/logo.jpeg">
-		  <div class="collapse navbar-collapse" id="navcol-1">
-			<ul class="navbar-nav"></ul>
-		  </div>
+			<img class="logo" src="assets/img/logo.jpeg">
+			<div class="collapse navbar-collapse" id="navcol-1">
+				<ul class="navbar-nav"></ul>
+			</div>
 		</div>
-	  </nav>
+	</nav>
 	<!-- Sidebar/menu -->
 	<div class="wrapper">
 		<!-- Sidebar/menu -->
 		<nav class="sidebar collapse" id="mySidebar"><br>
-		  <div style="padding:0.01em 16px">
-		  </div>
-		  <div>
-			<a href="dashboard.html">
-			  <button-bar>
-				<i class="fa fa-th-large fa-fw" style="margin-right:16px!important"></i>Dashboard
-			  </button-bar>
-			</a>
-			<a href="view_add_admins.html">
-			  <button-bar>
-				<i class="fa fa-group fa-fw" style="margin-right:16px!important"></i>View/Add Admins
-			  </button-bar>
-			</a>
-			<a href="requests.html">
-			  <button-bar>
-				<i class="fa fa-bell fa-fw" style="margin-right:16px!important"></i>Requests
-			  </button-bar>
-			</a>
-			<a href="view_add_trainings.html">
-			  <button-bar>
-				<i class="fa fa-file-text-o fa-fw" style="margin-right:16px!important"></i>View/Add Training
-			  </button-bar>
-			</a>
-			<a href="view_employees.html">
-			  <button-bar>
-				<i class="fa fa-address-card-o fa-fw" style="margin-right:16px!important"></i>View Employees
-			  </button-bar>
-			</a>
-			<a href="account_settings.html">
-			  <button-bar>
-				<i class="fa fa-cog fa-fw" style="margin-right:16px!important"></i>Account Settings
-			  </button-bar>
-			</a>
-			<a href="logout.html">
-			  <button-bar href="logout.html">
-				<i class="fa fa-sign-out fa-fw" style="margin-right:16px!important"></i>Logout
-			  </button-bar>
-			</a>
+			<div style="padding:0.01em 16px">
+			</div>
+			<div>
+				<a href="dashboard.html">
+					<button-bar>
+						<i class="fa fa-th-large fa-fw" style="margin-right:16px!important"></i>Dashboard
+					</button-bar>
+				</a>
+				<a href="view_add_admins.html">
+					<button-bar>
+						<i class="fa fa-group fa-fw" style="margin-right:16px!important"></i>View/Add Admins
+					</button-bar>
+				</a>
+				<a href="requests.html">
+					<button-bar>
+						<i class="fa fa-bell fa-fw" style="margin-right:16px!important"></i>Requests
+					</button-bar>
+				</a>
+				<a href="view_add_trainings.html">
+					<button-bar>
+						<i class="fa fa-file-text-o fa-fw" style="margin-right:16px!important"></i>View/Add Training
+					</button-bar>
+				</a>
+				<a href="view_employees.html">
+					<button-bar>
+						<i class="fa fa-address-card-o fa-fw" style="margin-right:16px!important"></i>View Employees
+					</button-bar>
+				</a>
+				<a href="account_settings.html">
+					<button-bar>
+						<i class="fa fa-cog fa-fw" style="margin-right:16px!important"></i>Account Settings
+					</button-bar>
+				</a>
+				<a href="logout.html">
+					<button-bar href="logout.html">
+						<i class="fa fa-sign-out fa-fw" style="margin-right:16px!important"></i>Logout
+					</button-bar>
+				</a>
 		</nav>
-	  </div>
+	</div>
 
-	  
-    <!-- Overlay effect when opening sidebar on small screens -->
-    <div class="overlay-effect hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
-      id="myOverlay"></div>
+
+	<!-- Overlay effect when opening sidebar on small screens -->
+	<div class="overlay-effect hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+		id="myOverlay"></div>
 
 	<!-- !PAGE CONTENT! -->
 	<div class="w3-main" style="margin-left:300px">
@@ -82,7 +82,33 @@
 				<div class="w3-section w3-padding-13">
 					<button class="search_btn" type="submit"><i class="fa fa-search"></i></button>
 					<input type="text" placeholder="Search..">
-					<button class="w3-button w3-red"><i class="fa fa-filter w3-margin-right"></i>Filter</button>
+					<!-- Trigger/Open the Modal -->
+					<button class="w3-button w3-red" onclick="document.getElementById('filter_popup').style.display='block'" class="w3-button">Filter</button>
+					<!-- The Modal -->
+					<div id="filter_popup" class="w3-modal">
+						<div class="w3-modal-content">
+							<div class="w3-container">
+								<span onclick="document.getElementById('filter_popup').style.display='none'"
+									class="w3-button w3-display-topright">&times;</span>
+								<p>Filter by Department</p>
+								<select name="site" id="site">
+									<option value="Bulgaria">Bulgaria</option>
+								</select>
+								<p>Filter by Status</p>
+								<select name="site" id="site">
+									<option value="Bulgaria">Bulgaria</option>
+								</select>
+								<p>Filter by Role</p>
+								<select name="site" id="site">
+									<option value="Bulgaria">Bulgaria</option>
+								</select>
+								<div class="w3-container w3-margin-top w3-margin-bottom" style="float: right;">
+									<button class="w3-button w3-red">Set</button>
+									<button class="w3-button w3-gray">Clear Filters</button>
+								</div>
+							</div>
+						</div>
+					</div>
 					<button class="w3-button w3-red"><i class="fa fa-sign-out w3-margin-right"></i>Export</button>
 				</div>
 			</div>
@@ -130,14 +156,8 @@
 					<td>role</td>
 					<td>status</td>
 				</tr>
-
 			</table>
-
-
-
 		</div>
-
-
 	</div>
 	<script src="assets/js/sidebar.js"></script>
 </body>
