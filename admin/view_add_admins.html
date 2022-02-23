@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
-<title>3. View/Add Admins</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/see_employee_records.css">
-<link rel="stylesheet" href="assets/css/header.css">
-<link rel="stylesheet" href="assets/css/styles.css">
-<link rel="stylesheet" href="assets/css/dashboard.css">
-
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+<html lang="en">
+<head>
+  <title>3. View/Add Admins</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/see_employee_records.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
   <!-- Header -->
   <nav class="navbar navbar-expand-lg navigation-clean-search">
     <div class="container">
@@ -22,7 +22,7 @@
     </div>
   </nav>
   <!-- Sidebar/menu -->
-  <div class="wrapper">
+  <div class="wrapper" style="margin-top: -20px;">
 
     <!-- Sidebar/menu -->
     <nav class="sidebar collapse" id="mySidebar"><br>
@@ -72,13 +72,13 @@
       id="myOverlay"></div>
 
   <!-- !PAGE CONTENT! -->
-  <div class="w3-main" style="margin-left:300px">
+  <div class="main" style="padding-left: 5%;">
 
     <!-- Header -->
     <header id="portfolio">
-      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
-          class="fa fa-bars"></i></span>
-      <div class="w3-container">
+      <span class="hide-large hover-text-gray" onclick="w3_open()"
+      style="margin:20px 20px; font-size:36px!important;"><i class="fa fa-bars"></i></span>
+      <div style="padding:0.01em 16px;margin-top: 24px">
         <h1><b>View/Add Admins</b></h1>
         <div class="w3-section w3-padding-13">
           <button class="search_btn" type="submit"><i class="fa fa-search"></i></button>
@@ -90,7 +90,7 @@
     </header>
 
     <div>
-      <div class="w3-container w3-padding-large w3-white add_new_admin">
+      <div class="add_new_admin">
         <h4 id="contact"><b>ADD NEW ADMIN</b></h4>
         <form action="/action_page.php">
           <div class="w3-row w3-section">
