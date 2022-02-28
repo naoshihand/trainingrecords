@@ -1,12 +1,19 @@
 <?php
 require 'require/config.php';
 $admins = query("SELECT * FROM admin");
+if(isset($_POST["register"])) {
+    if (registration($_POST) > 0) {
+        echo "<script> alert('User successfully created!'); </script>";
+    } else {
+        echo mysqli_error($conn);
+    }
+} 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>3. View/Add Admins</title>
+  <title>View/Add Admins</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -97,25 +104,33 @@ $admins = query("SELECT * FROM admin");
     <div>
       <div class="add_new_admin">
         <h4 id="contact"><b>ADD NEW ADMIN</b></h4>
-        <form action="/action_page.php">
+        <form method="POST" action="http://wowcr34te.epizy.com/admin/view_add_admins.php">
           <div class="w3-row w3-section">
             <div class="w3-col" style="width:85px"><i></i>Username</div>
             <div class="w3-rest">
-              <input class="w3-input w3-border" name="first" type="text">
+              <input class="w3-input w3-border" name="username" type="text">
             </div>
           </div>
 
           <div class="w3-row w3-section">
             <div class="w3-col" style="width:85px">
-              <i"></i>Password
+              <i></i>Password
             </div>
             <div class="w3-rest">
-              <input class="w3-input w3-border" name="last" type="text">
+              <input class="w3-input w3-border" name="password" type="password">
             </div>
           </div>
 
-          <button class="w3-button w3-red fa fa-save w3-margin-left"><i></i>Save</button>
-          <button class="w3-button w3-gray fa w3-margin-left"><i></i>Cancel</button>
+          <div class="w3-row w3-section">
+            <div class="w3-col" style="width:85px">
+              <i></i>Confirm Password
+            </div>
+            <div class="w3-rest">
+              <input class="w3-input w3-border" name="confirm_password" type="password">
+            </div>
+          </div>
+
+          <button class="w3-button w3-red fa fa-save w3-margin-left" type="submit" name="register"><i></i>Register</button>
         </form>
       </div>
 
