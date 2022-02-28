@@ -1,3 +1,8 @@
+<?php
+require 'require/config.php';
+$employees = query("SELECT * FROM employee");
+?>
+
 <!DOCTYPE html>
 <html>
 <title>View Employees</title>
@@ -14,7 +19,7 @@
 	<!-- Header -->
 	<nav class="navbar navbar-expand-lg navigation-clean-search">
 		<div class="container">
-			<img class="logo" src="assets/img/logo.jpeg">
+			<img class="logo" src="assets/img/logo.svg">
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="navbar-nav"></ul>
 			</div>
@@ -27,38 +32,38 @@
 			<div style="padding:0.01em 16px">
 			</div>
 			<div>
-				<a href="dashboard.html">
+				<a href="dashboard.php">
 					<button-bar>
 						<i class="fa fa-th-large fa-fw" style="margin-right:16px!important"></i>Dashboard
 					</button-bar>
 				</a>
-				<a href="view_add_admins.html">
+				<a href="view_add_admins.php">
 					<button-bar>
 						<i class="fa fa-group fa-fw" style="margin-right:16px!important"></i>View/Add Admins
 					</button-bar>
 				</a>
-				<a href="requests.html">
+				<a href="requests.php">
 					<button-bar>
 						<i class="fa fa-bell fa-fw" style="margin-right:16px!important"></i>Requests
 					</button-bar>
 				</a>
-				<a href="view_add_trainings.html">
+				<a href="view_add_trainings.php">
 					<button-bar>
 						<i class="fa fa-file-text-o fa-fw" style="margin-right:16px!important"></i>View/Add Training
 					</button-bar>
 				</a>
-				<a href="view_employees.html">
+				<a href="view_employees.php">
 					<button-bar>
 						<i class="fa fa-address-card-o fa-fw" style="margin-right:16px!important"></i>View Employees
 					</button-bar>
 				</a>
-				<a href="account_settings.html">
+				<a href="account_settings.php">
 					<button-bar>
 						<i class="fa fa-cog fa-fw" style="margin-right:16px!important"></i>Account Settings
 					</button-bar>
 				</a>
-				<a href="logout.html">
-					<button-bar href="logout.html">
+				<a href="logout.php">
+					<button-bar href="logout.php">
 						<i class="fa fa-sign-out fa-fw" style="margin-right:16px!important"></i>Logout
 					</button-bar>
 				</a>
@@ -127,9 +132,12 @@
 					<th id="tr_trainingName">First Name<button class="btn"><i class="fa fa-sort"></i>
 							<btn>
 					</th>
+                    <th id="tr_trainingName">Middle Name<button class="btn"><i class="fa fa-sort"></i>
+							<btn>
+					</th>
 					<th id="tr_StartDate">Last Name<button class="btn"><i class="fa fa-sort"></i>
 							<btn></i></th>
-					<th id="tr_EndDate">Gener<button class="btn"><i class="fa fa-sort"></i>
+					<th id="tr_EndDate">Gender<button class="btn"><i class="fa fa-sort"></i>
 							<btn></i></th>
 					<th id="tr_sme">Position<button class="btn"><i class="fa fa-sort"></i>
 							<btn></i></th>
@@ -144,18 +152,22 @@
 					<th id="tr_totalHour">Status<button class="btn"><i class="fa fa-sort"></i>
 							<btn></i></th>
 				</tr>
+				<?php $i = 1 ?>
+                <?php foreach($employees as $employee) : ?>
 				<tr>
-					<td>1</td>
-					<td>Naoshi</td>
-					<td>Murata</td>
-					<td>M</td>
-					<td>Trainee</td>
-					<td></td>
-					<td>Takeyoshi</td>
-					<td>10</td>
-					<td>role</td>
-					<td>status</td>
+					<td><?= $employee["employee_id"] ?></td>
+					<td><?= $employee["first_name"] ?></td>
+                    <td><?= $employee["middle_name"] ?></td>
+					<td><?= $employee["last_name"] ?></td>
+					<td><?= $employee["gender"] ?></td>
+					<td><?= $employee["position_name"] ?></td>
+					<td><?= $employee["site"] ?></td>
+					<td><?= $employee["total_training_hours"] ?></td>
+					<td><?= $employee["role"] ?></td>
+					<td><?= $employee["status"] ?></td>
 				</tr>
+				<?php $i++ ?>
+                <?php endforeach; ?>
 			</table>
 		</div>
 	</div>
