@@ -1,3 +1,4 @@
+<!--
 <?php
 require 'require/config.php';
 $admins = query("SELECT * FROM admin");
@@ -9,150 +10,137 @@ if(isset($_POST["register"])) {
     }
 } 
 ?>
+-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>View/Add Admins</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/see_employee_records.css">
-  <link rel="stylesheet" href="assets/css/header.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/dashboard.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View/Add Admin</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/training_form.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-  <!-- Header -->
+
+<body style="overflow-y: hidden;">
   <nav class="navbar navbar-expand-lg navigation-clean-search">
-    <div class="container">
-      <img class="logo" src="assets/img/logo.svg">
-      <div class="collapse navbar-collapse" id="navcol-1">
-        <ul class="navbar-nav"></ul>
-      </div>
+  <div class="container">
+    <img class="logo" src="assets/img/logo.jpeg">
+    <div class="collapse navbar-collapse" id="navcol-1">
+      <ul class="navbar-nav"></ul>
+    </div>
+  </div>
+</nav>
+<div class="wrapper">
+
+  <!-- Sidebar/menu -->
+  <nav class="sidebar collapse" id="mySidebar"><br>
+    <div style="padding:0.01em 16px">
+    </div>
+    <div>
+      <a href="dashboard.html">
+        <button-bar>
+          <i class="fa fa-th-large fa-fw" style="margin-right:16px!important"></i>Dashboard
+        </button-bar>
+      </a>
+      <a href="view_add_admins.html">
+        <button-bar>
+          <i class="fa fa-group fa-fw" style="margin-right:16px!important"></i>View/Add Admins
+        </button-bar>
+      </a>
+      <a href="requests.html">
+        <button-bar>
+          <i class="fa fa-bell fa-fw" style="margin-right:16px!important"></i>Requests
+        </button-bar>
+      </a>
+      <a href="view_add_trainings.html">
+        <button-bar>
+          <i class="fa fa-file-text-o fa-fw" style="margin-right:16px!important"></i>View/Add Training
+        </button-bar>
+      </a>
+      <a href="view_employees.html">
+        <button-bar>
+          <i class="fa fa-address-card-o fa-fw" style="margin-right:16px!important"></i>View Employees
+        </button-bar>
+      </a>
+      <a href="account_settings.html">
+        <button-bar>
+          <i class="fa fa-cog fa-fw" style="margin-right:16px!important"></i>Account Settings
+        </button-bar>
+      </a>
+      <a href="logout.html">
+        <button-bar href="logout.html">
+          <i class="fa fa-sign-out fa-fw" style="margin-right:16px!important"></i>Logout
+        </button-bar>
+      </a>
     </div>
   </nav>
-  <!-- Sidebar/menu -->
-  <div class="wrapper" style="margin-top: -20px;">
-
-    <!-- Sidebar/menu -->
-    <nav class="sidebar collapse" id="mySidebar"><br>
-      <div style="padding:0.01em 16px">
-      </div>
-      <div>
-        <a href="dashboard.php">
-          <button-bar>
-            <i class="fa fa-th-large fa-fw" style="margin-right:16px!important"></i>Dashboard
-          </button-bar>
-        </a>
-        <a href="view_add_admins.php">
-          <button-bar>
-            <i class="fa fa-group fa-fw" style="margin-right:16px!important"></i>View/Add Admins
-          </button-bar>
-        </a>
-        <a href="requests.php">
-          <button-bar>
-            <i class="fa fa-bell fa-fw" style="margin-right:16px!important"></i>Requests
-          </button-bar>
-        </a>
-        <a href="view_add_trainings.php">
-          <button-bar>
-            <i class="fa fa-file-text-o fa-fw" style="margin-right:16px!important"></i>View/Add Training
-          </button-bar>
-        </a>
-        <a href="view_employees.php">
-          <button-bar>
-            <i class="fa fa-address-card-o fa-fw" style="margin-right:16px!important"></i>View Employees
-          </button-bar>
-        </a>
-        <a href="account_settings.php">
-          <button-bar>
-            <i class="fa fa-cog fa-fw" style="margin-right:16px!important"></i>Account Settings
-          </button-bar>
-        </a>
-        <a href="logout.php">
-          <button-bar href="logout.php">
-            <i class="fa fa-sign-out fa-fw" style="margin-right:16px!important"></i>Logout
-          </button-bar>
-        </a>
-      </div>
-    </nav>
 
     <!-- Overlay effect when opening sidebar on small screens -->
     <div class="overlay-effect hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
       id="myOverlay"></div>
 
   <!-- !PAGE CONTENT! -->
-  <div class="main" style="padding-left: 5%;">
-
-    <!-- Header -->
-    <header id="portfolio">
-      <span class="hide-large hover-text-gray" onclick="w3_open()"
+  <div class="main">
+    <span class="hide-large hover-text-gray" onclick="w3_open()"
       style="margin:20px 20px; font-size:36px!important;"><i class="fa fa-bars"></i></span>
-      <div style="padding:0.01em 16px;margin-top: 24px">
-        <h1><b>View/Add Admins</b></h1>
-        <div class="w3-section w3-padding-13">
-          <button class="search_btn" type="submit"><i class="fa fa-search"></i></button>
-          <input type="text" placeholder="Search..">
-          <button class="w3-button w3-red"><i></i>Create User</button>
-          <button class="w3-button w3-red"><i></i>Go to Employees</button>
-        </div>
+    <div style="padding:0.01em 16px;margin-top: 24px">
+      <h1><b>View/Add Admins</b></h1>
+    </div>
+<form>
+  <table>
+      <div>
+      <label>ADD NEW ADMINS</label>
       </div>
-    </header>
+    <tr>
+      <td>Username</td>
+      <td><input type="text" required></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><input type="number" required></td>
+    </tr>
+    <tr>
+      <td><input type="submit" value="Save">
+      <input type="reset" value="Cancel"></td>
+    </tr>
 
-    <div>
-      <div class="add_new_admin">
-        <h4 id="contact"><b>ADD NEW ADMIN</b></h4>
-        <form method="POST" action="http://wowcr34te.epizy.com/admin/view_add_admins.php">
-          <div class="w3-row w3-section">
-            <div class="w3-col" style="width:85px"><i></i>Username</div>
-            <div class="w3-rest">
-              <input class="w3-input w3-border" name="username" type="text">
-            </div>
-          </div>
-
-          <div class="w3-row w3-section">
-            <div class="w3-col" style="width:85px">
-              <i></i>Password
-            </div>
-            <div class="w3-rest">
-              <input class="w3-input w3-border" name="password" type="password">
-            </div>
-          </div>
-
-          <div class="w3-row w3-section">
-            <div class="w3-col" style="width:85px">
-              <i></i>Confirm Password
-            </div>
-            <div class="w3-rest">
-              <input class="w3-input w3-border" name="confirm_password" type="password">
-            </div>
-          </div>
-
-          <button class="w3-button w3-red fa fa-save w3-margin-left" type="submit" name="register"><i></i>Register</button>
-        </form>
-      </div>
-
-
-      <table>
-        <caption class="caption_top">
-          <div>Current Admins</div>
-        </caption>
+    <table class="form-control">
+      <div style="width:95%;padding:0.1em 16px;margin-top: 24px">
+        <label>CURRENT ADMIN</label>
         <tr>
-          <th id="tr_id">ID<button class="btn"><i class="fa fa-sort"></i>
-              <btn></i></th>
-          <th id="tr_username">Username<button class="btn"><i class="fa fa-sort"></i>
-              <btn></i></th>
-          <th id="tr_creation_date">Creation Date<button class="btn"><i class="fa fa-sort"></i>
-              <btn></i></th>
-          <th id="tr_updation_date">Updation Date<button class="btn"><i class="fa fa-sort"></i>
-              <btn></i></th>
-          <th id="tr_action">Action<button class="btn"><i class="fa fa-sort"></i>
-              <btn></i></th>
-
+          <th>ID</th>
+          <th>Username</th>
+          <th>Creation Date</th>
+          <th>Updation Date</th>
+          <th>Action</th>
         </tr>
-        <?php $i = 1 ?>
+        <tr>
+          <td>01</td>
+          <td>admin1234</td>
+          <td>DD/MM/YY hh:mm:ss</td>
+          <td>DD/MM/YY hh:mm:ss</td>
+          <td>Remove</td>
+        </tr>
+      </div>
+    </table>
+  </table>
+</form>
+  </div>
+</div>
+
+  <script src="assets/js/sidebar.js"></script>
+</body>
+
+<!-- I'm sorry I couldn't figure out this.
+
+<?php $i = 1 ?>
         <?php foreach($admins as $admin) : ?>
         <tr>
             <td><?= $admin["admin_id"]; ?></td>
@@ -162,13 +150,8 @@ if(isset($_POST["register"])) {
         </tr>
         <?php $i++ ?>
         <?php endforeach; ?>
-      </table>
-    </div>
 
-
-  </div>
-
-  <script src="assets/js/sidebar.js"></script>
-</body>
+-->
 
 </html>
+
